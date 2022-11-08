@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <script src="code.js"></script>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 1em;
+        }
+        body{
+            background-color: #c1d62f
+;
+            color:  white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 2em;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #letras{
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        button{
+            margin-top: 10px;
+            margin-left: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top:5px;
+            padding-bottom:5px;
+            border-radius:8px;
+            border-width: 3px;
+            border-color: #c1d62f;
+            background-color: white;
+            font-size: 1em;
+            color: #c1d62f;
+        }
+        button:hover{
+            background-color: #9aaf16;
+            color: white;
+        }
+        #adivina{
+            margin-top: 50px;
+            text-align: center;
+            font-size: 2em;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        span{
+            margin: 10px;
+        }
+        #retry{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header><h1>HANGMAN</h1><h1>VANILLA JAVASCRIPT HANDMAN GAME</h1>
+    <p>Use the alphabet below to guess the word, or click hint to get a clue</p></head>
+    <main>
+            <div id="letras">
+                <button class='caracter' id="a">a</button>
+                <button class='caracter' id="b">b</button>
+                <button class='caracter' id="c">c</button>
+                <button class='caracter' id="d">d</button>
+                <button class='caracter' id="e">e</button>
+                <button class='caracter' id="f">f</button>
+                <button class='caracter' id="g">g</button>
+                <button class='caracter' id="h">h</button>
+                <button class='caracter' id="i">i</button>
+                <button class='caracter' id="j">j</button>
+                <button class='caracter' id="k">k</button>
+                <button class='caracter' id="l">l</button>
+                <button class='caracter' id="m">m</button>
+                <button class='caracter' id="n">n</button>
+                <button class='caracter' id="ñ">ñ</button>
+                <button class='caracter' id="o">o</button>
+                <button class='caracter' id="p">p</button>
+                <button class='caracter' id="q">q</button>
+                <button class='caracter' id="r">r</button>
+                <button class='caracter' id="s">s</button>
+                <button class='caracter' id="t">t</button>
+                <button class='caracter' id="u">u</button>
+                <button class='caracter' id="v">v</button>
+                <button class='caracter' id="w">w</button>
+                <button class='caracter' id="x">x</button>
+                <button class='caracter' id="y">y</button>
+                <button class='caracter' id="z">z</button>
+            </div>
+            <div id="adivina">
+            </div>
+            <div>Tienes <span id="vidas">10</span> vidas</div>
+            <div id="fin">
+                <button id="retry">Reiniciar</button>
+            </div>
+    </main>
+</body>
+</html>
