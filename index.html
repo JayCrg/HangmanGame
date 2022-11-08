@@ -69,12 +69,22 @@
             align-items: center;
         }
 
+        #lang{
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
 
     </style>
 </head>
 <body>
     <header><h1>HANGMAN</h1><h1>VANILLA JAVASCRIPT HANDMAN GAME</h1>
-    <p>Use the alphabet below to guess the word, or click hint to get a clue</p></head>
+    <p>Use the alphabet below to guess the word, or click hint to get a clue</p>
+    <!--<div id="lang">
+        <button lang="en" id="en">English</button>
+    <button lang="руc" id="rus">Русский</button></head>
+    </div>-->
     <main>
             <div id="letras">
                 <button class='caracter' id="a">a</button>
@@ -105,6 +115,40 @@
                 <button class='caracter' id="y">y</button>
                 <button class='caracter' id="z">z</button>
             </div>
+            <!--<div letrasrusa>
+                <button class='caracterruso'>й</button>
+                <button class='caracterruso'>ц</button>
+                <button class='caracterruso'>у</button>
+                <button class='caracterruso'>к</button>
+                <button class='caracterruso'>е</button>
+                <button class='caracterruso'>н</button>
+                <button class='caracterruso'>г</button>
+                <button class='caracterruso'>ш</button>
+                <button class='caracterruso'>щ</button>
+                <button class='caracterruso'>з</button>
+                <button class='caracterruso'>х</button>
+                <button class='caracterruso'>ъ</button>
+                <button class='caracterruso'>ф</button>
+                <button class='caracterruso'>ы</button>
+                <button class='caracterruso'>в</button>
+                <button class='caracterruso'>а</button>
+                <button class='caracterruso'>п</button>
+                <button class='caracterruso'>р</button>
+                <button class='caracterruso'>о</button>
+                <button class='caracterruso'>л</button>
+                <button class='caracterruso'>д</button>
+                <button class='caracterruso'>ж</button>
+                <button class='caracterruso'>э</button>
+                <button class='caracterruso'>я</button>
+                <button class='caracterruso'>ч</button>
+                <button class='caracterruso'>с</button>
+                <button class='caracterruso'>м</button>
+                <button class='caracterruso'>и</button>
+                <button class='caracterruso'>т</button>
+                <button class='caracterruso'>ь</button>
+                <button class='caracterruso'>б</button>
+                <button class='caracterruso'>ю</button>
+            </div>-->
             <div id="adivina">
             </div>
             <div>Tienes <span id="vidas">10</span> vidas</div>

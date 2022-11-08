@@ -1,5 +1,6 @@
 var palabras = ['pescado', 'filologa', 'autobus', 'elefante', 'habitacion'];
 
+
 function generarSpan(palabra) {
     for (let i = 0; i < palabra.split('').length; i++) {
         let span = document.createElement("span");
@@ -29,9 +30,11 @@ function restaurarVidas() {
     vidas.innerHTML = 10;
 }*/
 
-function settear() {    
+function settear() {  
+
     var palabraEscogida = escogerPalabra();
     caracteresHtml = document.getElementsByClassName('caracter');
+    console.log(caracteresHtml);
     spans = document.getElementsByTagName('span');
 
     for (i=0; i < caracteresHtml.length; i++) {
@@ -76,5 +79,5 @@ function settear() {
 window.onload = () => {
 //añadir reinicio
     settear();
-    }   
+}
 
