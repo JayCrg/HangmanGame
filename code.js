@@ -1,6 +1,6 @@
-var palabrasEsp = ['pescado', 'filologia', 'autobus', 'elefante', 'habitacion'];
-var palabrasIng = ['fish', 'filology', 'bus', 'elephant', 'room'];//['bus']
-var palabrasRuso = ['рыба', 'филология', 'автобус', 'слон', 'комната'];
+var palabrasEsp = ['pescado', 'filologia', 'autobus', 'elefante', 'habitacion', 'dinosaurio', 'mano', 'espantapajaros', 'hipnosis', 'abecedario', 'deltoides', 'escarabajo'];
+var palabrasIng = ['fish', 'filology', 'bus', 'elephant', 'room',  'dinosaur', 'hand', 'spider', 'hypnosis', 'alphabet', 'deltoids', 'beetle'];
+var palabrasRuso = ['рыба', 'филология', 'автобус', 'слон', 'комната', 'динозавр', 'рука', 'паук', 'гипноз', 'алфавит', 'дельтоиды', 'жук'];
 var vidas = 10;
 
 function seleccionarAlfabeto() {
