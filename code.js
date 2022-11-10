@@ -86,15 +86,20 @@ function borrarSpan() {
 
 function borrarResultado() {
     let elemento = document.getElementById("fin");
-    borrar = true
-    while (borrar) {
+    while (elemento.firstChild.id != 'retry') {
         elemento.removeChild(elemento.firstChild);
-        if (elemento.firstChild.id == 'retry')
-        borrar = false;
     }
 }
 
+function eliminarCaracterArray(array, caracter) {
 
+    for (let i = 0; i < array.length; i++) {
+        copy = [...array]
+        if (array[i] == caracter) {
+            copy.splice(i, 1);
+        }
+    }
+}
 
 
 
@@ -142,25 +147,26 @@ function settear() {
                 arrayAuxliar = [];
                 for (let i = 0; i < spans.length; i++)
                 arrayAuxliar.push(spans[i].innerHTML);
-                
+                //eliminarCaracterArray(arrayAuxliar, '_');
+                console.log(arrayAuxliar);
                 for (let i = 0; i < letras.length; i++) {
                     if (letra == letras[i]) {
                         span[i].innerHTML = letra;
                         e.target.style.backgroundColor = 'black';
                         e.target.style.transition = '1s';
                         e.target.setAttribute('disabled', '');
-                    //     if (!arrayAuxliar.includes('_')) {
-                    //         botones = document.getElementsByClassName('caracter');
-                    //         for (let i = 0; i < botones.length; i++) {
-                    //             botones[i].setAttribute('disabled', '');
-                    //         }
-                    //         victoria = document.createElement('span');
-                    //         victoria.innerHTML = 'Has ganado';
-                    //         victoria.setAttribute('class', 'resultado');
-                    //         victoria.style.backgroundColor = 'green';
-                    //         victoria.style.padding = '5px';
-                    //         document.getElementById('fin').insertBefore(derrota, document.getElementById('fin').firstChild);
-                    // }
+                        if (!arrayAuxliar.includes('_') ) {
+                            botones = document.getElementsByClassName('caracter');
+                            for (let i = 0; i < botones.length; i++) {
+                                botones[i].setAttribute('disabled', '');
+                            }
+                            victoria = document.createElement('span');
+                            victoria.innerHTML = 'Has ganado';
+                            victoria.setAttribute('class', 'resultado');
+                            victoria.style.backgroundColor = 'green';
+                            victoria.style.padding = '5px';
+                            document.getElementById('fin').insertBefore(derrota, document.getElementById('fin').firstChild);
+                    }
                 }
             }
         }
