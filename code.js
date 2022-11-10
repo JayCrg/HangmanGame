@@ -91,20 +91,21 @@ function borrarResultado() {
     }
 }
 
-function eliminarCaracterArray(array, caracter) {
-
-    for (let i = 0; i < array.length; i++) {
-        copy = [...array]
-        if (array[i] == caracter) {
-            copy.splice(i, 1);
-        }
+//comprobar que dos cadenas tienen los mismos caracteres en diferentes ordenes
+function comprobar(palabra, palabra2) {
+    if (palabra.length != palabra2.length) {
+        return false;
     }
+    palabra = palabra.sort().join('');
+    palabra2 = palabra2.sort().join('');
+    return palabra == palabra2;
 }
 
 
 
-function settear() {
 
+function settear() {
+    var arrayAuxliar = [];//array que usaremos para guardar las letras que ya se han pulsado
     var palabraEscogida = escogerPalabra();
     caracteresHtml = document.getElementsByClassName('caracter');
     spans = document.getElementsByTagName('span');//espacios en blanco
@@ -144,18 +145,15 @@ function settear() {
                 }
             }
             else {
-                arrayAuxliar = [];
-                for (let i = 0; i < spans.length; i++)
-                arrayAuxliar.push(spans[i].innerHTML);
-                //eliminarCaracterArray(arrayAuxliar, '_');
-                console.log(arrayAuxliar);
                 for (let i = 0; i < letras.length; i++) {
                     if (letra == letras[i]) {
                         span[i].innerHTML = letra;
                         e.target.style.backgroundColor = 'black';
                         e.target.style.transition = '1s';
                         e.target.setAttribute('disabled', '');
-                        if (!arrayAuxliar.includes('_') ) {
+                        arrayAuxliar.push(span[i].innerHTML);
+                        console.log(arrayAuxliar);
+                        if (comprobar(arrayAuxliar, letras)) {
                             botones = document.getElementsByClassName('caracter');
                             for (let i = 0; i < botones.length; i++) {
                                 botones[i].setAttribute('disabled', '');
@@ -165,11 +163,11 @@ function settear() {
                             victoria.setAttribute('class', 'resultado');
                             victoria.style.backgroundColor = 'green';
                             victoria.style.padding = '5px';
-                            document.getElementById('fin').insertBefore(derrota, document.getElementById('fin').firstChild);
+                            document.getElementById('fin').insertBefore(victoria, document.getElementById('fin').firstChild);
+                        }
                     }
                 }
             }
-        }
         });
     }
 }
