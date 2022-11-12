@@ -152,7 +152,6 @@ function settear() {
                         e.target.style.transition = '1s';
                         e.target.setAttribute('disabled', '');
                         arrayAuxliar.push(span[i].innerHTML);
-                        console.log(arrayAuxliar);
                         if (comprobar(arrayAuxliar, letras)) {
                             botones = document.getElementsByClassName('caracter');
                             for (let i = 0; i < botones.length; i++) {
@@ -164,6 +163,7 @@ function settear() {
                             victoria.style.backgroundColor = 'green';
                             victoria.style.padding = '5px';
                             document.getElementById('fin').insertBefore(victoria, document.getElementById('fin').firstChild);
+                            return; 
                         }
                     }
                 }
